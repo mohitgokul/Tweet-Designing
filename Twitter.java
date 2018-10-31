@@ -1,30 +1,34 @@
-Twitter
+//Twitter
 
-class Wrapper{
+class Wrapper
+{
     ArrayList<Integer> list;
-    int index;
- 
-    public Wrapper(ArrayList<Integer> list, int index){
+    int index; 
+    public Wrapper(ArrayList<Integer> list, int index)
+    {
         this.list=list;
         this.index=index;
     }
 }
  
-public class Twitter {
+public class Twitter
+{
     HashMap<Integer, HashSet<Integer>> userMap;//user and followees
     HashMap<Integer, ArrayList<Integer>> tweetMap;//user and tweets
     HashMap<Integer, Integer> orderMap; //tweet and order
     int order; //global order counter
  
     /** Initialize your data structure here. */
-    public Twitter() {
+    public Twitter()
+    {
         userMap = new HashMap<Integer, HashSet<Integer>>();
         tweetMap = new HashMap<Integer, ArrayList<Integer>>();
         orderMap = new HashMap<Integer, Integer>();
     }
  
     /** Compose a new tweet. */
-    public void postTweet(int userId, int tweetId) {
+    public void postTweet(int userId, int tweetId)
+    {
         ArrayList<Integer> list = tweetMap.get(userId);
         if(list==null){
             list = new ArrayList<Integer>();
